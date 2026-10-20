@@ -6,8 +6,17 @@
     <title>Formulario</title>
 </head>
 <body>
+<h2>Teste de erros</h2>
 
-    <form>
+<% erros.forEach(erro => { %>
+    <p style="color: red;"><%= erro.msg %></p>
+<% }); %>
+
+<p><%= retorno || "" %></p>
+
+<p><%= retorno || "" %></p>
+   
+    <form action="/formulario" method="post" novalidate>
         <div>
         <label for="name">Nome:</label>
         <input type="text"
@@ -48,8 +57,7 @@
         name="mensagem"
         id="mensagem"
         placeholder="Digite sua mensagem aqui"
-        rows="5"
-        required>
+        rows="5">
     </textarea>
     </div>
 
